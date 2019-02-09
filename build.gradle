@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'checkstyle'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile group: 'org.springframework', name: 'spring-context', version: '5.1.4.RELEASE'
+    compile group: 'com.google.inject', name: 'guice', version: '4.2.2'
+    compile group: 'com.google.guava', name: 'guava', version: '27.0.1-jre'
+    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.11.1'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.4.0'
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.4.0'
+}
+
+// Define the main class for the application
+// mainClassName = 'de.schrader.SpringVsGuiceDependencyInjection'
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events 'PASSED', 'FAILED', 'SKIPPED'
+    }
+}
