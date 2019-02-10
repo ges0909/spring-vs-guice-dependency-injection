@@ -20,6 +20,9 @@ public class SpringUserService {
      *
      * Spring also supports @Inject. @Inject is part of the Java CDI (Contexts and Dependency
      * Injection) that defines a standard for dependency injection.
+     *
+     * Field-based injection uses reflection to inject the dependencies, which is costlier than
+     * constructor-based or setter-based injection.
      */
     @Autowired
     private AccountService accountService;

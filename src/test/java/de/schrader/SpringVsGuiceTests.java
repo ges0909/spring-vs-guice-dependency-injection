@@ -19,8 +19,21 @@ class SpringVsGuiceTests {
     private final static String TEST_NAME = "This is the name of the account service.";
 
     /**
-     * We need to define an application context to access the Spring beans. Then at
-     * runtime, we can retrieve the AccountService instance from our UserService bean.
+     * Inversion of Control is a principle in software engineering by which the
+     * control of objects or portions of a program is transferred to a container
+     * or framework. By contrast with traditional programming, in which our custom
+     * code makes calls to a library, IoC enables a framework to take control of
+     * the flow of a program and make calls to our custom code. If we want to add
+     * our own behavior, we need to extend the classes of the framework or plugin
+     * our own classes.
+     *
+     * Dependency injection is a pattern through which to implement IoC, where the
+     * control being inverted is the setting of object’s dependencies.
+     *
+     * In the Spring framework, the IoC container is represented by the interface
+     * ApplicationContext. Here we need to define an application context manually
+     * to access the Spring beans. Then at runtime, we can retrieve the AccountService
+     * instance from our UserService bean.
      */
     private final ApplicationContext context = new AnnotationConfigApplicationContext(SpringMainConfig.class);
 
