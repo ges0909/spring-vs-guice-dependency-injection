@@ -1,9 +1,9 @@
-package de.schrader.guice;
+package schrader.di.guice;
 
 import com.google.common.base.Optional;
 import com.google.inject.Inject;
-import de.schrader.common.AccountService;
-import de.schrader.common.Car;
+import schrader.di.common.AccountService;
+import schrader.di.common.Car;
 
 import javax.annotation.Nullable;
 

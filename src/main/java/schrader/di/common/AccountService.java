@@ -1,4 +1,4 @@
-package de.schrader.common;
+package schrader.di.common;
 
 public interface AccountService {
 

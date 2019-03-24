@@ -1,16 +1,16 @@
-package de.schrader;
+package schrader.di.test;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import de.schrader.common.BookService;
-import de.schrader.guice.GuiceModule;
-import de.schrader.guice.GuiceUserService;
-import de.schrader.spring.SpringMainConfig;
-import de.schrader.spring.SpringUserService;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import schrader.di.common.BookService;
+import schrader.di.guice.GuiceModule;
+import schrader.di.guice.GuiceUserService;
+import schrader.di.spring.SpringMainConfig;
+import schrader.di.spring.SpringUserService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -26,10 +26,10 @@ class SpringVsGuiceTests {
      * the flow of a program and make calls to our custom code. If we want to add
      * our own behavior, we need to extend the classes of the framework or plugin
      * our own classes.
-     *
+     * <p>
      * Dependency injection is a pattern through which to implement IoC, where the
      * control being inverted is the setting of object’s dependencies.
-     *
+     * <p>
      * In the Spring framework, the IoC container is represented by the interface
      * ApplicationContext. Here we need to define an application context manually
      * to access the Spring beans. Then at runtime, we can retrieve the AccountService
@@ -62,7 +62,7 @@ class SpringVsGuiceTests {
     }
 
     @Nested
-    class GuiceTests {
+    class GoogleGuiceTests {
 
         @Test
         void moduleConfigure() {

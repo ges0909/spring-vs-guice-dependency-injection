@@ -1,12 +1,12 @@
-package de.schrader.guice;
+package schrader.di.guice;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
 
-import de.schrader.common.AccountService;
-import de.schrader.common.BookService;
-import de.schrader.common.BookServiceImpl;
-import de.schrader.common.Car;
+import schrader.di.common.AccountService;
+import schrader.di.common.BookService;
+import schrader.di.common.BookServiceImpl;
+import schrader.di.common.Car;
 
 /**
  * Guice manages its dependencies in a special class called a module. A Guice module has to

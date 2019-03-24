@@ -1,6 +1,6 @@
-package de.schrader.spring;
+package schrader.di.spring;
 
-import de.schrader.common.AccountService;
+import schrader.di.common.AccountService;
 import org.springframework.stereotype.Component;
 
 /**
